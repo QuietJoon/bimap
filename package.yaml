@@ -1,0 +1,45 @@
+name:                bimap
+version:             0.4.0
+github:              "QuietJoon/bimap"
+license:             BSD3
+author:              "Stuart Cook and contributors 2008, Joel Williamson 2015, YongJoon Joe 2020"
+maintainer:          "YongJoon Joe <developer@quietjoon.net>"
+copyright:           "Stuart Cook and contributors 2008, Joel Williamson 2015, YongJoon Joe 2020"
+synopsis:            Bidirectional mapping between two key types
+category:            Data
+tested-with:         GHC <= 8.6.5 && >= 7.0
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/QuietJoon/bimap#readme>
+
+dependencies:
+- base >= 4 && < 5
+- containers
+- deepseq
+- exceptions
+- ghc-prim ## FIXME: Add condition when ghc < 7.6.1
+
+default-extensions:
+- DeriveDataTypeable
+ghc-options:
+- -Wall
+
+library:
+  source-dirs: src
+
+tests:
+  tests:
+    main:                Test/RunTests.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - QuickCheck >= 2 && < 3
+    - template-haskell >= 2 && < 3
+    - ghc-prim ## FIXME: Add condition when ghc < 7.6.1
+    - bimap

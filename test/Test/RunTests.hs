@@ -12,7 +12,7 @@ import System.Exit
 
 main :: IO ()
 main = do
-  allPassed <- $( extractTests "Test/Tests.hs" )
+  allPassed <- $( extractTests "test/Test/Tests.hs" )
   if allPassed
     then exitSuccess
     else exitFailure
