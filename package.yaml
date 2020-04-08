@@ -1,5 +1,5 @@
 name:                bimap
-version:             0.4.0
+version:             0.4.1.0
 github:              "QuietJoon/bimap"
 license:             BSD3
 author:              "Stuart Cook and contributors 2008, Joel Williamson 2015, YongJoon Joe 2020"
@@ -21,6 +21,8 @@ dependencies:
 - deepseq
 - exceptions
 - ghc-prim ## FIXME: Add condition when ghc < 7.6.1
+- hashable
+- unordered-containers
 
 default-extensions:
 - DeriveDataTypeable
